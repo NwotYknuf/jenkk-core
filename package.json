@@ -45,7 +45,11 @@
     ],
     "devDependencies": {
         "@size-limit/preset-small-lib": "^7.0.8",
+        "@typescript-eslint/parser": "^2.34.0",
+        "eslint": "^6.8.0",
         "husky": "^7.0.4",
+        "prettier": "^2.6.2",
+        "prettier-eslint": "^13.0.0",
         "size-limit": "^7.0.8",
         "tsdx": "^0.14.1",
         "tslib": "^2.3.1",

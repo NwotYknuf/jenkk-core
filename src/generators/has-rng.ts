@@ -1,10 +1,9 @@
-import { Generator } from "./generator"
+import { Generator } from './generator';
 
 interface HasRNG {
-
-    cloneWithNewRNG(): Generator
+  cloneWithNewRNG(): Generator;
 }
 
-const hasRNG = (generator: any): boolean => "cloneWithNewRNG" in generator
+const hasRNG = (generator: any): boolean => 'cloneWithNewRNG' in generator;
 
-export { HasRNG, hasRNG }
+export { HasRNG, hasRNG };

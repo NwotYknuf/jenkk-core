@@ -1,5 +1,5 @@
 interface Snapshot {
-    toJSON(): any;
+  toJSON(): any;
 }
 
-export { type Snapshot }
+export { Snapshot };

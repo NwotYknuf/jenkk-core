@@ -1,8 +1,8 @@
-import { Snapshot } from "./snapshot";
+import { Snapshot } from './snapshot';
 
 interface Memento<T extends Snapshot> {
-    save(): T;
-    restore(snapshot: T): void;
+  save(): T;
+  restore(snapshot: T): void;
 }
 
-export { type Memento }
+export { Memento };

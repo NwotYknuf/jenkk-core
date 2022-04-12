@@ -1,26 +1,23 @@
-import { MinoType } from "../../src";
-import { PieceBuilder } from "../../src/builders";
+import { MinoType } from '../../src';
+import { PieceBuilder } from '../../src/builders';
 
+describe('Piece Builder', () => {
+  let builder: PieceBuilder;
 
-describe("Piece Builder", () => {
+  beforeAll(() => {
+    builder = new PieceBuilder();
+  });
 
-    let builder: PieceBuilder;
+  it('Builds an I piece if no input is given', () => {
+    const piece = builder.build();
+    expect(piece.type).toBe(MinoType.I);
+  });
 
-    beforeAll(() => {
-        builder = new PieceBuilder();
-    })
-
-    it("Builds an I piece if no input is given", () => {
-        const piece = builder.build();
-        expect(piece.type).toBe(MinoType.I);
-    });
-
-    it("Builds a piece from json text", () => {
-        const jsonText = `{ "prototype": "J" }`;
-        const json = JSON.parse(jsonText);
-        builder.loadJSON(json);
-        const piece = builder.build();
-        expect(piece).toEqual(PieceBuilder.buildFromTemplate(MinoType.J));
-    });
-
+  it('Builds a piece from json text', () => {
+    const jsonText = `{ "prototype": "J" }`;
+    const json = JSON.parse(jsonText);
+    builder.loadJSON(json);
+    const piece = builder.build();
+    expect(piece).toEqual(PieceBuilder.buildFromTemplate(MinoType.J));
+  });
 });
